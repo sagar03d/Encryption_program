@@ -1,5 +1,5 @@
-Encryption_programm
-# Encryption_programm
+Encryption_program
+# Encryption_program
 It is a Encryption programm that encrypt messages.
 I don't know it might stupid, but i love doing it.
 Basically this programm takes strings as a input and give output after a long process.
