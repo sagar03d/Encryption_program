@@ -2,8 +2,11 @@
 #include<string>
 using namespace std;
 char str[50];
-int bin[50];
-int binary(char);
+int des[50];
+int bin1[20];
+long int bin2[40];
+int binary(int);
+int decimal(char);
 int main()
 {
 	//Input characters
@@ -14,7 +17,7 @@ int main()
 		index++;
 		cin>>str[index];
 	}while(str[index]!='0');
-	
+
 //Output of characters and their binaries
 	cout<<"\nGiven input without spaces along with the binaries of each character: \n";
 	for(int i=0;i<index;i++)
@@ -24,17 +27,37 @@ int main()
 	while(j<index)
 	{
 	char a=str[j];
-	binary(a);
+	decimal(a);
 	j++;
 	}
 cout<<"\n";
 	return 0;
 }
-//Binary conversion from character
-int binary(char a)
+//Decimal conversion from character
+int decimal(char a)
 {
 	int j=0;
 	int i = a;
-  	cout<<" "<<i;
-	bin[j]=i;
+  	cout<<"\n"<<i;
+	des[j]=i;
+	j++;
+	binary(des[j-1]);
   }
+//Binary Conversion from decimal
+int binary(int a)
+{
+    int i=0,j=0;
+    int rem;
+
+    if (a <= 1)
+    {
+        cout <<" \n"<< a;
+        return 0;
+    }
+    else
+    rem = a % 2;
+    binary(a / 2);
+    cout <<""<< rem;
+    bin1[i]=rem;
+    i++;
+}
